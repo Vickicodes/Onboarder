@@ -1,0 +1,26 @@
+{
+  "name": "bbcsocial",
+  "version": "1.0.0",
+  "description": "BBC Social",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest --verbose --runInBand",
+    "test:watch": "npm run test -- --watch -o"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk-mock": "^4.3.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "jest": "^24.3.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
