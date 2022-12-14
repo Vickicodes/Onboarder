@@ -1,11 +1,12 @@
 import SignupForm from "../components/SignupForm";
 import ChooseInterests from "./ChooseInterests";
+import logo from "./beeb.webp";
 
 const OnboardingWelcome = () => {
   return (
     <div>
       <div className="h-100 d-flex justify-content-center align-items-center">
-        <img src="/beeb.webp" class="img-fluid" alt="..." />
+        <img src={logo} class="img-fluid" alt="..." />
       </div>
       <div className="col-lg-6 d-flex align-items-center gradient-custom-2">
         <div className="text-white px-3 py-4 p-md-5 mx-md-4">
