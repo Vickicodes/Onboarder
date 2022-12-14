@@ -1,7 +1,9 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import ChooseInterests from "../containers/ChooseInterests";
 
 function SignupForm() {
+  const onClick = () => <ChooseInterests />;
   return (
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -16,7 +18,7 @@ function SignupForm() {
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" placeholder="Password" />
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="submit" onClick={onClick}>
         Submit
       </Button>
     </Form>
