@@ -1,24 +1,50 @@
+import React, { useState } from "react";
 import SignupForm from "../components/SignupForm";
 import ChooseInterests from "./ChooseInterests";
+import HomeLocation from "./HomeLocation";
 import logo from "./beeb.webp";
 
 const OnboardingWelcome = () => {
+  const [showSignUp, setShowSignUp] = useState();
+  const [showHomeLocation, setShowHomeLocation] = useState();
+  const [showChooseInterests, setShowChooseInterests] = useState(true);
+
   return (
     <div>
-      <div className="h-100 d-flex justify-content-center align-items-center">
+      <div className="d-flex px-3 py-4">
         <img src={logo} class="img-fluid" alt="..." />
       </div>
-      <div className="col-lg-6 d-flex align-items-center gradient-custom-2">
-        <div className="text-white px-3 py-4 p-md-5 mx-md-4">
-          <h4 className="mb-4">Welcome to BBC Social.</h4>
+      <div className="col-lg-6 d-flex px-3 py-4 align-items-center">
+        <div className="text-white">
+          <h4 className="mb-4">Welcome to BBC UK Onboarder.</h4>
           <p className="small mb-0">
-            Paragraph about introducing and connecting people from around the
-            world to various communities within the BBC Sphere.
+            Let us know where in the world are they from, things you love from a
+            range of sports, activities, and programming from your country and
+            we can recommend things you may enjoy here in the UK.
           </p>
-          <SignupForm />
+          <div className="py-4">
+            {showSignUp ? (
+              <SignupForm
+                onclick={() => {
+                  setShowSignUp(!showSignUp);
+                  setShowHomeLocation(!showHomeLocation);
+                }}
+              />
+            ) : null}
+            {showHomeLocation ? (
+              <HomeLocation
+                onClick={() => {
+                  setShowHomeLocation(false);
+                  setShowChooseInterests(true);
+                }}
+              />
+            ) : null}
+            {showChooseInterests ? (
+              <ChooseInterests onClick={() => setShowChooseInterests(true)} />
+            ) : null}
+          </div>
         </div>
       </div>
-      <ChooseInterests />
     </div>
   );
 };
