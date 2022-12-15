@@ -1,7 +1,6 @@
 import Form from "react-bootstrap/Form";
 
 const HomeLocation = () => {
-<<<<<<< HEAD
   return (
     <div id="homeLocation">
       <Form>
@@ -29,11 +28,6 @@ const HomeLocation = () => {
         </div>
       </div>
     </div>
-=======
-  console.log("HOMEEEEEEEEE");
-  return (
-  <div>I am the home location container</div>
->>>>>>> c790096ecbf20af7d6a30003cad6e0159367b88a
   );
 };
 
