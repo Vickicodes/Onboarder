@@ -6,14 +6,19 @@ import HomeLocation from "./HomeLocation";
 import logo from "./beebw.png";
 
 const OnboardingWelcome = () => {
-  const [showSignUp, setShowSignUp] = useState(true);
-  const [showHomeLocation, setShowHomeLocation] = useState();
+  const [showSignUp, setShowSignUp] = useState();
+  const [showHomeLocation, setShowHomeLocation] = useState(true);
   const [showChooseInterests, setShowChooseInterests] = useState();
 
   return (
     <div>
       <div className="d-flex px-3 py-4 align-items-center">
-        <Image src={logo} class="img-fluid w-90" alt="..." />
+        <Image
+          src={logo}
+          style={{ width: "360px" }}
+          class="img-fluid w-90"
+          alt="..."
+        />
       </div>
       <div className="col-lg-6 d-flex px-3 py-4 align-items-center">
         <div className="text-white">
