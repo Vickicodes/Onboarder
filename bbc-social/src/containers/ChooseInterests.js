@@ -2,7 +2,7 @@ import CardGroup from "../components/CardGroup";
 
 const ChooseInterests = () => {
   return (
-    <div>
+    <div style={{ width: "360px" }}>
       Are some Interests
       <CardGroup />
       Are some tv
