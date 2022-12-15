@@ -6,8 +6,8 @@ import HomeLocation from "./HomeLocation";
 import logo from "./beebw.png";
 
 const OnboardingWelcome = () => {
-  const [showSignUp, setShowSignUp] = useState(true);
-  const [showHomeLocation, setShowHomeLocation] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(false);
+  const [showHomeLocation, setShowHomeLocation] = useState(true);
   const [showChooseInterests, setShowChooseInterests] = useState(false);
 
   useEffect(() => {
