@@ -13,8 +13,8 @@ import BusiImage from "./shark-tank-india.jpg";
 const cardStyle = {
   background: "#222222",
   color: "#eeeeee",
-  maxWidth: "360px",
-  padding: "4px",
+  width: "172px",
+  height: "182px",
 };
 
 const imageStyle = {
@@ -26,65 +26,29 @@ cardStyle["font-family"] = "ReithSans, Arial, Helvetica, freesans, sans-serif";
 cardStyle["border-radius"] = 0;
 cardStyle["--bs-card-border-width"] = "5px";
 
+const items = [
+  { title: "The Kapil Karma Show", image: ComedyImage },
+  { title: "Wagle Ki Dunia", image: FamilyImage },
+  { title: "Daily Soap", image: SoapImage },
+  { title: "Lil Masters", image: RealityImage },
+  { title: "Indian Idol", image: TalentImage },
+  { title: "MasterChef India", image: CookingImage },
+  { title: "Shark Tank India", image: BusiImage },
+];
+
 function GroupExample() {
   return (
-    <Row xs={3} md={3} className="g-3">
-      <Card style={cardStyle}>
-        <Card.Img style={imageStyle} variant="top" src={ComedyImage} />
-        <Card.Footer>
-          <Card.Title>
-            <b>The Kapil Karma Show</b>
-          </Card.Title>
-        </Card.Footer>
-      </Card>
-      <Card style={cardStyle}>
-        <Card.Img style={imageStyle} variant="top" src={SoapImage} />
-        <Card.Footer>
-          <Card.Title>
-            <b>Daily Soap</b>
-          </Card.Title>
-        </Card.Footer>
-      </Card>
-      <Card style={cardStyle}>
-        <Card.Img style={imageStyle} variant="top" src={RealityImage} />
-        <Card.Footer>
-          <Card.Title>
-            <b>Lil Masters</b>
-          </Card.Title>
-        </Card.Footer>
-      </Card>
-      <Card style={cardStyle}>
-        <Card.Img style={imageStyle} variant="bottom" src={FamilyImage} />
-        <Card.Footer>
-          <Card.Title>
-            <b>Wagle Ki Dunia</b>
-          </Card.Title>
-        </Card.Footer>
-      </Card>
-      <Card style={cardStyle}>
-        <Card.Img style={imageStyle} variant="bottom" src={TalentImage} />
-        <Card.Footer>
-          <Card.Title>
-            <b>Indian Idol</b>
-          </Card.Title>
-        </Card.Footer>
-      </Card>
-      <Card style={cardStyle}>
-        <Card.Img style={imageStyle} variant="bottom" src={CookingImage} />
-        <Card.Footer>
-          <Card.Title>
-            <b>MasterChef India</b>
-          </Card.Title>
-        </Card.Footer>
-      </Card>
-      <Card style={cardStyle}>
-        <Card.Img style={imageStyle} variant="bottom" src={BusiImage} />
-        <Card.Footer>
-          <Card.Title>
-            <b>Shark Tank India</b>
-          </Card.Title>
-        </Card.Footer>
-      </Card>
+    <Row xs={2} md={3} className="g-3">
+      {items.map((item) => (
+        <Col>
+          <Card style={cardStyle}>
+            <Card.Img style={imageStyle} variant="bottom" src={item.image} />
+            <Card.Footer>
+              <Card.Title>{item.title}</Card.Title>
+            </Card.Footer>
+          </Card>
+        </Col>
+      ))}
     </Row>
   );
 }
