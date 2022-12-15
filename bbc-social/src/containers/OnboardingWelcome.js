@@ -7,8 +7,8 @@ import logo from "./beebw.png";
 
 const OnboardingWelcome = () => {
   const [showSignUp, setShowSignUp] = useState();
-  const [showHomeLocation, setShowHomeLocation] = useState(true);
-  const [showChooseInterests, setShowChooseInterests] = useState();
+  const [showHomeLocation, setShowHomeLocation] = useState();
+  const [showChooseInterests, setShowChooseInterests] = useState(true);
 
   return (
     <div>
