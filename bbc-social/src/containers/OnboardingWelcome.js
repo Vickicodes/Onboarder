@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "react-bootstrap/Image";
 import SignupForm from "../components/SignupForm";
 import ChooseInterests from "./ChooseInterests";
@@ -6,9 +6,13 @@ import HomeLocation from "./HomeLocation";
 import logo from "./beebw.png";
 
 const OnboardingWelcome = () => {
-  const [showSignUp, setShowSignUp] = useState();
-  const [showHomeLocation, setShowHomeLocation] = useState(true);
-  const [showChooseInterests, setShowChooseInterests] = useState();
+  const [showSignUp, setShowSignUp] = useState(true);
+  const [showHomeLocation, setShowHomeLocation] = useState(false);
+  const [showChooseInterests, setShowChooseInterests] = useState(false);
+
+  useEffect(() => {
+    console.log("states " + showSignUp + showHomeLocation + showChooseInterests);
+  }, [showSignUp, showHomeLocation, showChooseInterests]);
 
   return (
     <div>
@@ -16,7 +20,7 @@ const OnboardingWelcome = () => {
         <Image
           src={logo}
           style={{ width: "360px" }}
-          class="img-fluid w-90"
+          className="img-fluid w-90"
           alt="..."
         />
       </div>
