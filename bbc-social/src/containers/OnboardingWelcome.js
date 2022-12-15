@@ -16,7 +16,7 @@ const OnboardingWelcome = () => {
         <Image
           src={logo}
           style={{ width: "360px" }}
-          class="img-fluid w-90"
+          className="img-fluid w-90"
           alt="..."
         />
       </div>

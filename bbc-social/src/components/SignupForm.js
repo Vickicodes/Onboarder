@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-function SignupForm({ onClick }) {
+function SignupForm({ stateFunc }) {
   return (
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -16,7 +16,7 @@ function SignupForm({ onClick }) {
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" placeholder="Password" />
       </Form.Group>
-      <Button variant="primary" type="submit" onClick={onClick}>
+      <Button variant="primary" type="submit" onClick={() => stateFunc}>
         Submit
       </Button>
     </Form>
