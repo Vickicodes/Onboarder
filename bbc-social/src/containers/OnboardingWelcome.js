@@ -1,18 +1,19 @@
 import React, { useState } from "react";
+import Image from "react-bootstrap/Image";
 import SignupForm from "../components/SignupForm";
 import ChooseInterests from "./ChooseInterests";
 import HomeLocation from "./HomeLocation";
-import logo from "./beeb.webp";
+import logo from "./beebw.png";
 
 const OnboardingWelcome = () => {
-  const [showSignUp, setShowSignUp] = useState();
+  const [showSignUp, setShowSignUp] = useState(true);
   const [showHomeLocation, setShowHomeLocation] = useState();
-  const [showChooseInterests, setShowChooseInterests] = useState(true);
+  const [showChooseInterests, setShowChooseInterests] = useState();
 
   return (
     <div>
-      <div className="d-flex px-3 py-4">
-        <img src={logo} class="img-fluid" alt="..." />
+      <div className="d-flex px-3 py-4 align-items-center">
+        <Image src={logo} class="img-fluid w-90" alt="..." />
       </div>
       <div className="col-lg-6 d-flex px-3 py-4 align-items-center">
         <div className="text-white">
