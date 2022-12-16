@@ -4,8 +4,8 @@ import OnboardingWelcome from "./containers/OnboardingWelcome";
 import SelectPage from "./containers/SelectPage";
 
 const App = () => {
-  const [showOnboarding, setShowOnboarding] = useState(true);
-  const [showSelectPage, setShowSelectPage] = useState();
+  const [showOnboarding, setShowOnboarding] = useState();
+  const [showSelectPage, setShowSelectPage] = useState(true);
   return (
     <div
       className="App gradient-custom-2"
